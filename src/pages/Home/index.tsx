@@ -13,7 +13,7 @@ import {
   TextButtonHome
 } from './styles'
 
-const Home: React.FC = () => {
+const Home: React.FC = ({ navigation }) => {
   return (
       <Container source={require('../../assets/foto_home.webp')}>
           <Header>
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
 
           <Content>
             <TitleHome>Um mundo financeiro sem complexidades</TitleHome>
-            <ButtonHome>
+            <ButtonHome onPress={() => navigation.navigate("Main")}>
                 <TextButtonHome>Começar</TextButtonHome>
             </ButtonHome>
           </Content>
